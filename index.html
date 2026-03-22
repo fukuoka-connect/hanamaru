@@ -1,1 +1,1171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>喜び畳｜はなまる工房 — 命名書・出産祝い い草刺繍 福岡・宇美町</title>
+  <meta name="description" content="畳（い草）に繊細な刺繍を施した命名書「喜び畳」。8,800円〜・全国送料無料。日本唯一の畳刺繍技術。安産の神様・宇美八幡宮そばのはなまる工房。福岡・宇美町。">
+  <meta name="keywords" content="命名書,宇美町,福岡,い草アート,出産祝い,畳刺繍,喜び畳,はなまる工房,命名書 宇美,出産祝い 福岡">
+  <meta property="og:title" content="喜び畳｜はなまる工房 命名書・出産祝い 福岡宇美町">
+  <meta property="og:description" content="畳に刺繍。世界にひとつの命名書「喜び畳」。8,800円〜・全国送料無料。">
+  <meta property="og:type" content="website">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600;800&family=Noto+Sans+JP:wght@300;400;500&family=Klee+One:wght@400;600&family=Cormorant:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream:    #fdf8f0;
+  --warm:     #f7f0e4;
+  --warm2:    #f0e8d8;
+  --sand:     #e8dcc8;
+  --green:    #3a6b45;
+  --green-lt: #5a8f66;
+  --green-pale: #e8f0e9;
+  --tatami:   #b09050;
+  --tatami-lt:#d4b870;
+  --brown:    #5a3e28;
+  --text:     #2a1f14;
+  --text-m:   #5a4535;
+  --text-l:   #9a8570;
+  --gold:     #c49030;
+  --red-soft: #c44040;
+  --white:    #ffffff;
+
+  --f-disp:  'Klee One', 'Shippori Mincho B1', serif;
+  --f-serif: 'Shippori Mincho B1', serif;
+  --f-sans:  'Noto Sans JP', sans-serif;
+  --f-rom:   'Cormorant', serif;
+  --ease:    cubic-bezier(.25,1,.5,1);
+}
+
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:var(--f-sans);
+  background:var(--cream);
+  color:var(--text);
+  line-height:1.8;
+  overflow-x:hidden;
+}
+a { text-decoration:none; color:inherit; }
+img { display:block; }
+.sm { font-size:.78em; }
+h1,h2,h3 { font-family:var(--f-disp); font-weight:600; line-height:1.4; letter-spacing:.04em; }
+
+/* ── grain ── */
+body::before {
+  content:''; position:fixed; inset:0; z-index:9999; pointer-events:none; opacity:.022;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ── reveal ── */
+.rv { opacity:0; transform:translateY(24px); transition:opacity .8s var(--ease), transform .8s var(--ease); }
+.rv.on { opacity:1; transform:none; }
+.d1{transition-delay:.12s}.d2{transition-delay:.24s}.d3{transition-delay:.36s}
+
+/* ── NAV ── */
+#nav {
+  position:fixed; top:0; left:0; right:0; z-index:500;
+  height:58px; padding:0 24px;
+  display:flex; align-items:center; justify-content:space-between;
+  transition:background .4s, box-shadow .4s;
+}
+#nav.on {
+  background:rgba(253,248,240,.95);
+  backdrop-filter:blur(14px);
+  box-shadow:0 1px 0 rgba(176,144,80,.2);
+}
+.nav-logo {
+  display:flex; align-items:center; gap:10px;
+}
+.nav-logo-img { width:34px; height:34px; object-fit:contain; }
+.nav-logo-nm  { font-family:var(--f-disp); font-size:.95rem; color:var(--green); letter-spacing:.1em; }
+.nav-tel {
+  display:flex; align-items:center; gap:6px;
+  font-family:var(--f-rom); font-style:italic;
+  font-size:1rem; color:var(--green); font-weight:400;
+  letter-spacing:.04em;
+}
+.nav-tel-label { font-size:.58rem; letter-spacing:.15em; color:var(--text-l); font-style:normal; font-family:var(--f-sans); }
+
+
+/* ══════════════════════════════
+   HERO — フルスクリーン写真 + 
+   中央に舞い降りるテキスト
+══════════════════════════════ */
+#hero {
+  position:relative;
+  height:100svh; min-height:600px;
+  overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+}
+
+.hero-bg {
+  position:absolute; inset:0;
+}
+.hero-bg img {
+  width:100%; height:100%; object-fit:cover;
+  transform:scale(1.06);
+  animation:herozoom 12s ease-out forwards;
+}
+@keyframes herozoom { from{transform:scale(1.06)} to{transform:scale(1)} }
+
+/* 温かいオーバーレイ */
+.hero-overlay {
+  position:absolute; inset:0;
+  background:
+    linear-gradient(to bottom,
+      rgba(20,30,20,.55) 0%,
+      rgba(20,30,20,.35) 35%,
+      rgba(10,20,10,.65) 75%,
+      rgba(10,20,10,.80) 100%
+    );
+}
+
+/* 左上の光 */
+.hero-light { display:none; }
+
+.hero-content {
+  position:relative; z-index:2;
+  text-align:center;
+  padding:0 24px;
+  max-width:720px;
+}
+
+.hero-en {
+  font-family:var(--f-rom);
+  font-style:italic;
+  font-size:.8rem; letter-spacing:.38em;
+  color:rgba(255,255,255,.85);
+  margin-bottom:24px;
+  display:block;
+  animation:fadeup .9s .2s both;
+  text-shadow:0 1px 6px rgba(0,0,0,.7);
+}
+
+h1 {
+  font-size:clamp(2.8rem,6vw,5rem);
+  color:#fff;
+  line-height:1.2;
+  text-shadow:0 2px 8px rgba(0,0,0,.8), 0 4px 32px rgba(0,0,0,.6);
+  margin-bottom:28px;
+  animation:fadeup .9s .4s both;
+}
+h1 .sm { color:rgba(255,255,255,.65); }
+
+.hero-lead {
+  font-size:clamp(.88rem,1.6vw,1rem);
+  color:rgba(255,255,255,.95);
+  line-height:2.1; font-weight:400;
+  margin-bottom:40px;
+  animation:fadeup .9s .6s both;
+  text-shadow:0 1px 6px rgba(0,0,0,.7), 0 2px 20px rgba(0,0,0,.5);
+}
+
+.hero-cta-row {
+  display:flex; flex-wrap:wrap;
+  justify-content:center; gap:12px;
+  animation:fadeup .9s .8s both;
+}
+.btn-main {
+  display:inline-flex; align-items:center; gap:8px;
+  background:var(--green);
+  color:#fff;
+  padding:16px 32px;
+  font-family:var(--f-serif); font-size:.96rem; font-weight:600; letter-spacing:.1em;
+  box-shadow:0 4px 20px rgba(42,31,20,.3);
+  transition:background .25s, transform .2s, box-shadow .25s;
+  border-radius:2px;
+}
+.btn-main:hover { background:var(--green-lt); transform:translateY(-2px); box-shadow:0 8px 28px rgba(42,31,20,.35); }
+.btn-sub {
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(255,255,255,.18);
+  backdrop-filter:blur(8px);
+  color:#fff;
+  padding:15px 28px;
+  font-size:.88rem; letter-spacing:.1em; font-weight:400;
+  border:1px solid rgba(255,255,255,.4);
+  transition:background .25s;
+  border-radius:2px;
+}
+.btn-sub:hover { background:rgba(255,255,255,.28); }
+
+/* スクロール */
+.hero-scroll {
+  position:absolute; bottom:28px; left:50%;
+  transform:translateX(-50%);
+  display:flex; flex-direction:column; align-items:center; gap:6px;
+  font-family:var(--f-rom); font-style:italic;
+  font-size:.6rem; letter-spacing:.35em; color:rgba(255,255,255,.85); text-shadow:0 1px 4px rgba(0,0,0,.6);
+  z-index:3;
+  animation:bounce 2.6s ease-in-out infinite;
+}
+.hero-scroll-line { width:1px; height:40px; background:linear-gradient(to bottom,rgba(255,255,255,.5),transparent); }
+@keyframes bounce { 0%,100%{opacity:.5;transform:translateX(-50%) translateY(0)} 50%{opacity:1;transform:translateX(-50%) translateY(6px)} }
+@keyframes fadeup { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:none} }
+
+/* 価格バッジ（左下） */
+.hero-price-badge {
+  position:absolute; bottom:64px; right:32px; z-index:3;
+  background:var(--gold);
+  color:#fff; text-align:center;
+  padding:14px 20px;
+  box-shadow:0 4px 20px rgba(0,0,0,.45);
+  animation:fadeup 1s 1s both;
+}
+.hpb-from { font-size:.6rem; letter-spacing:.2em; opacity:.85; margin-bottom:2px; }
+.hpb-price { font-family:var(--f-rom); font-size:1.6rem; font-weight:400; line-height:1; }
+.hpb-tax { font-size:.58rem; opacity:.8; margin-top:2px; }
+
+
+/* ══════════════════════════════
+   TRUST BAR
+══════════════════════════════ */
+#trust {
+  background:var(--green);
+  padding:16px 0;
+}
+.trust-row {
+  display:flex; flex-wrap:wrap;
+  justify-content:center; gap:0;
+  max-width:800px; margin:0 auto; padding:0 16px;
+}
+.trust-item {
+  display:flex; align-items:center; gap:7px;
+  padding:0 20px;
+  font-size:.74rem; letter-spacing:.1em; color:rgba(255,255,255,.88);
+  font-weight:500;
+  border-right:1px solid rgba(255,255,255,.15);
+}
+.trust-item:last-child { border-right:none; }
+.trust-icon { font-size:.9rem; }
+
+
+/* ══════════════════════════════
+   SECTION 共通
+══════════════════════════════ */
+.sec   { padding:88px 0; background:var(--cream); }
+.sec-w { padding:88px 0; background:var(--warm); }
+.sec-w2{ padding:88px 0; background:var(--warm2); }
+.wrap  { max-width:1040px; margin:0 auto; padding:0 24px; }
+.wrap-n{ max-width:680px;  margin:0 auto; padding:0 24px; }
+
+/* section header */
+.sh { text-align:center; margin-bottom:60px; }
+.sh-tag {
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:var(--f-rom); font-style:italic;
+  font-size:.75rem; letter-spacing:.38em; color:var(--tatami);
+  text-transform:uppercase; margin-bottom:16px;
+}
+.sh-tag::before,.sh-tag::after { content:''; display:block; width:20px; height:1px; background:var(--tatami-lt); }
+.sh h2 { font-size:clamp(1.7rem,3vw,2.4rem); color:var(--text); margin-bottom:16px; }
+.sh p  { font-size:.9rem; color:var(--text-m); line-height:2.1; font-weight:300; }
+
+
+/* ══════════════════════════════
+   OPENING COPY — 想いを語る
+══════════════════════════════ */
+#opening { padding:88px 0; background:var(--cream); }
+.op-inner {
+  max-width:640px; margin:0 auto;
+  text-align:center; padding:0 24px;
+}
+.op-kana {
+  font-family:var(--f-disp); font-size:clamp(1.5rem,3vw,2.2rem);
+  color:var(--text); line-height:1.7; margin-bottom:28px;
+  letter-spacing:.06em;
+}
+.op-kana .sm { color:var(--text-m); }
+.op-lead {
+  font-size:.92rem; color:var(--text-m);
+  line-height:2.4; font-weight:300;
+  margin-bottom:24px;
+}
+.op-accent {
+  display:inline-block;
+  font-family:var(--f-serif); font-size:.88rem;
+  color:var(--green); font-weight:600;
+  letter-spacing:.08em;
+  border-bottom:1.5px solid var(--tatami-lt);
+  padding-bottom:2px;
+}
+
+/* ── 区切り装飾 ── */
+.ornament {
+  display:flex; align-items:center; gap:12px;
+  justify-content:center;
+  margin:20px auto;
+  max-width:200px;
+}
+.ornament::before,.ornament::after {
+  content:''; flex:1; height:1px;
+  background:linear-gradient(90deg,transparent,var(--tatami-lt));
+}
+.ornament::after { background:linear-gradient(90deg,var(--tatami-lt),transparent); }
+.ornament-diamond { width:6px; height:6px; background:var(--tatami); transform:rotate(45deg); }
+
+
+/* ══════════════════════════════
+   FULL PHOTO — 感情に訴える
+══════════════════════════════ */
+.photo-full {
+  width:100%; aspect-ratio:16/9; max-height:620px;
+  overflow:hidden; position:relative;
+}
+.photo-full img {
+  width:100%; height:100%; object-fit:cover;
+  transition:transform .6s var(--ease);
+}
+.photo-full:hover img { transform:scale(1.03); }
+.photo-caption {
+  position:absolute; bottom:0; left:0; right:0;
+  background:linear-gradient(to top, rgba(42,31,20,.65), transparent);
+  color:rgba(255,255,255,.85);
+  padding:48px 32px 20px;
+  font-family:var(--f-serif); font-size:.8rem; letter-spacing:.2em;
+}
+
+
+/* ══════════════════════════════
+   3 REASONS — カード並び
+══════════════════════════════ */
+.reasons-cards {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+}
+.r-card {
+  background:var(--white);
+  border-radius:4px;
+  overflow:hidden;
+  box-shadow:0 2px 16px rgba(42,31,20,.07);
+  transition:transform .3s var(--ease), box-shadow .3s;
+}
+.r-card:hover { transform:translateY(-5px); box-shadow:0 10px 36px rgba(42,31,20,.12); }
+.r-card-img {
+  height:200px; overflow:hidden; position:relative;
+}
+.r-card-img img { width:100%; height:100%; object-fit:cover; transition:transform .5s var(--ease); }
+.r-card:hover .r-card-img img { transform:scale(1.06); }
+.r-card-body { padding:28px 24px 32px; }
+.r-num {
+  font-family:var(--f-rom); font-style:italic;
+  font-size:2.8rem; font-weight:300;
+  color:rgba(176,144,80,.22); line-height:1;
+  margin-bottom:6px;
+}
+.r-card h3 { font-size:1.05rem; color:var(--text); margin-bottom:12px; line-height:1.5; }
+.r-card p  { font-size:.84rem; color:var(--text-m); line-height:2.1; font-weight:300; }
+.r-tag {
+  display:inline-block; margin-top:18px;
+  font-size:.66rem; font-weight:700; letter-spacing:.14em;
+  color:var(--green); border:1px solid var(--green);
+  padding:4px 12px;
+}
+
+
+/* ══════════════════════════════
+   PRODUCTS — 縦並び大カード
+══════════════════════════════ */
+.products-list { display:flex; flex-direction:column; gap:3px; }
+
+.prod-card {
+  display:grid; grid-template-columns:1fr 1fr;
+  background:var(--white);
+  overflow:hidden;
+  box-shadow:0 2px 16px rgba(42,31,20,.06);
+  transition:box-shadow .3s;
+}
+.prod-card:nth-child(even) { direction:rtl; }
+.prod-card:nth-child(even) > * { direction:ltr; }
+.prod-card:hover { box-shadow:0 8px 32px rgba(42,31,20,.12); }
+
+.prod-card-img {
+  position:relative; overflow:hidden;
+  min-height:340px;
+}
+.prod-card-img img { width:100%; height:100%; object-fit:cover; transition:transform .6s var(--ease); }
+.prod-card:hover .prod-card-img img { transform:scale(1.04); }
+.prod-card-tag {
+  position:absolute; top:20px; left:0;
+  background:var(--green); color:#fff;
+  font-size:.62rem; font-weight:700; letter-spacing:.14em;
+  padding:5px 16px;
+}
+
+.prod-card-body {
+  padding:48px 44px;
+  display:flex; flex-direction:column; justify-content:center;
+  background:var(--warm);
+}
+.prod-card-en {
+  font-family:var(--f-rom); font-style:italic;
+  font-size:.72rem; letter-spacing:.3em; color:var(--tatami);
+  margin-bottom:14px;
+}
+.prod-card-body h3 { font-size:clamp(1.3rem,2vw,1.8rem); color:var(--text); margin-bottom:16px; }
+.prod-card-body p  { font-size:.88rem; color:var(--text-m); line-height:2.2; font-weight:300; margin-bottom:20px; }
+
+.prod-spec-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:8px;
+  margin-bottom:28px;
+}
+.psg-item {
+  background:rgba(176,144,80,.1);
+  padding:10px 12px;
+  font-size:.76rem; color:var(--text-m); line-height:1.6; font-weight:300;
+}
+.psg-item strong { display:block; font-size:.68rem; color:var(--tatami-dk,#7a6235); letter-spacing:.1em; margin-bottom:2px; font-family:var(--f-serif); }
+
+.prod-price-box {
+  display:flex; align-items:center; gap:16px;
+  padding:16px 0; border-top:1px solid rgba(176,144,80,.2);
+  margin-bottom:20px;
+}
+.prod-price-num {
+  font-family:var(--f-rom); font-size:2rem; font-weight:300;
+  color:var(--brown); line-height:1;
+}
+.prod-price-info { font-size:.72rem; color:var(--text-l); line-height:1.7; }
+.prod-price-info strong { display:block; color:var(--green); font-size:.75rem; }
+
+.btn-prod {
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  background:var(--green); color:#fff;
+  padding:14px 24px;
+  font-family:var(--f-serif); font-size:.9rem; font-weight:600; letter-spacing:.1em;
+  transition:background .25s, transform .2s;
+  align-self:flex-start;
+  border-radius:2px;
+}
+.btn-prod:hover { background:var(--green-lt); transform:translateY(-2px); }
+
+
+/* ══════════════════════════════
+   VOICE — SNS風カード
+══════════════════════════════ */
+.voice-masonry {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  align-items:start;
+}
+.v-card {
+  background:var(--white);
+  border-radius:4px;
+  padding:0;
+  overflow:hidden;
+  box-shadow:0 2px 12px rgba(42,31,20,.07);
+  transition:transform .3s var(--ease), box-shadow .3s;
+}
+.v-card:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(42,31,20,.1); }
+.v-card-img {
+  width:100%; aspect-ratio:1;
+  overflow:hidden;
+}
+.v-card-img img { width:100%; height:100%; object-fit:cover; transition:transform .5s var(--ease); }
+.v-card:hover .v-card-img img { transform:scale(1.06); }
+.v-card-body { padding:20px 20px 24px; }
+.v-stars { color:var(--gold); font-size:.82rem; letter-spacing:.08em; margin-bottom:10px; }
+.v-text  { font-size:.83rem; line-height:2.1; color:var(--text-m); font-weight:300; margin-bottom:16px; }
+.v-footer{ display:flex; align-items:center; gap:10px; border-top:1px dotted rgba(176,144,80,.25); padding-top:14px; }
+.v-ava {
+  width:36px; height:36px; border-radius:50%; background:var(--green);
+  display:flex; align-items:center; justify-content:center;
+  color:#fff; font-size:.72rem; font-weight:700; flex-shrink:0;
+}
+.v-name { font-size:.78rem; color:var(--text); font-weight:600; }
+.v-desc { font-size:.68rem; color:var(--text-l); margin-top:1px; }
+
+
+/* ══════════════════════════════
+   PROCESS — シンプルな線
+══════════════════════════════ */
+.process-line {
+  position:relative;
+  display:grid; grid-template-columns:repeat(4,1fr); gap:0;
+}
+.process-line::before {
+  content:'';
+  position:absolute; top:28px;
+  left:calc(12.5% + 12px); right:calc(12.5% + 12px);
+  height:1px;
+  background:repeating-linear-gradient(90deg,var(--tatami-lt) 0,var(--tatami-lt) 6px,transparent 6px,transparent 12px);
+}
+.pl-step { display:flex; flex-direction:column; align-items:center; text-align:center; padding:0 12px; }
+.pl-dot {
+  width:56px; height:56px; border-radius:50%;
+  background:var(--white); border:2px solid var(--tatami-lt);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--f-rom); font-style:italic;
+  font-size:1.15rem; color:var(--tatami);
+  position:relative; z-index:1; margin-bottom:18px;
+  box-shadow:0 2px 10px rgba(42,31,20,.07);
+  transition:background .3s, color .3s, border-color .3s;
+}
+.pl-step:hover .pl-dot { background:var(--green); border-color:var(--green); color:#fff; }
+.pl-step-lbl { font-size:.6rem; letter-spacing:.2em; color:var(--tatami); font-weight:700; margin-bottom:6px; }
+.pl-step-ttl { font-family:var(--f-serif); font-size:.95rem; color:var(--text); margin-bottom:8px; }
+.pl-step-desc{ font-size:.78rem; color:var(--text-m); line-height:1.9; font-weight:300; }
+
+
+/* ══════════════════════════════
+   FAQ
+══════════════════════════════ */
+.faq-list { max-width:660px; margin:0 auto; }
+.faq-it { border-bottom:1px solid rgba(176,144,80,.2); }
+.faq-q {
+  width:100%; text-align:left;
+  display:flex; align-items:flex-start; gap:14px;
+  padding:20px 4px;
+  font-family:var(--f-serif); font-size:.97rem; font-weight:600;
+  color:var(--text); background:none; border:none; cursor:pointer;
+  transition:color .2s;
+}
+.faq-q:hover { color:var(--green); }
+.faq-qm { font-family:var(--f-rom); font-style:italic; font-size:1.1rem; color:var(--tatami); flex-shrink:0; line-height:1.5; }
+.faq-qi {
+  margin-left:auto; flex-shrink:0;
+  width:18px; height:18px; border-radius:50%;
+  border:1px solid rgba(176,144,80,.4);
+  display:flex; align-items:center; justify-content:center;
+  font-size:.66rem; color:var(--tatami);
+  transition:transform .3s, background .25s;
+}
+.faq-it.op .faq-qi { transform:rotate(45deg); background:var(--green); border-color:var(--green); color:#fff; }
+.faq-a {
+  display:none;
+  padding:0 4px 18px 34px;
+  font-size:.86rem; line-height:2.2; color:var(--text-m); font-weight:300;
+}
+.faq-it.op .faq-a { display:block; }
+
+
+/* ══════════════════════════════
+   ACCESS
+══════════════════════════════ */
+.access-2col { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
+.access-h { font-family:var(--f-disp); font-size:1.2rem; color:var(--text); margin-bottom:20px; }
+.access-tbl { width:100%; border-collapse:collapse; }
+.access-tbl tr { border-bottom:1px solid rgba(176,144,80,.15); }
+.access-tbl th {
+  width:80px; padding:12px 0;
+  font-size:.72rem; color:var(--text-l); letter-spacing:.14em; font-weight:600;
+  vertical-align:top; text-align:left;
+}
+.access-tbl td {
+  padding:12px 0;
+  font-size:.86rem; color:var(--text-m); font-weight:300; line-height:1.8;
+}
+.btn-tel {
+  display:flex; align-items:center; gap:10px;
+  margin-top:20px; background:var(--green); color:#fff;
+  padding:16px 24px;
+  transition:background .25s;
+}
+.btn-tel:hover { background:var(--green-lt); }
+.btn-tel-num   { font-family:var(--f-rom); font-size:1.35rem; letter-spacing:.05em; }
+.btn-tel-label { font-size:.66rem; letter-spacing:.14em; opacity:.8; }
+
+.map-placeholder {
+  background:var(--warm);
+  border:1px solid rgba(176,144,80,.25);
+  height:300px;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:12px;
+  box-shadow:3px 4px 16px rgba(42,31,20,.06);
+}
+.map-pin { font-size:2rem; }
+.map-nm  { font-family:var(--f-serif); font-size:.95rem; color:var(--text); }
+.map-ad  { font-size:.72rem; color:var(--text-l); letter-spacing:.1em; text-align:center; line-height:2; }
+
+
+/* ══════════════════════════════
+   CTA
+══════════════════════════════ */
+#cta {
+  position:relative; overflow:hidden;
+  padding:0;
+}
+.cta-photo {
+  position:absolute; inset:0;
+}
+.cta-photo img { width:100%; height:100%; object-fit:cover; }
+.cta-photo::after {
+  content:'';
+  position:absolute; inset:0;
+  background:rgba(42,31,20,.58);
+}
+.cta-body {
+  position:relative; z-index:1;
+  text-align:center;
+  padding:96px 24px;
+  max-width:640px; margin:0 auto;
+}
+.cta-body .sh-tag { color:rgba(255,255,255,.5); }
+.cta-body .sh-tag::before,.cta-body .sh-tag::after { background:rgba(255,255,255,.25); }
+.cta-body h2 { font-size:clamp(1.8rem,3.5vw,2.6rem); color:#fff; margin-bottom:18px; }
+.cta-body p  { font-size:.9rem; color:rgba(255,255,255,.75); line-height:2.1; font-weight:300; margin-bottom:40px; }
+.cta-btnrow { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
+.btn-cta-w {
+  display:flex; align-items:center; gap:8px;
+  background:#fff; color:var(--green);
+  padding:16px 36px;
+  font-family:var(--f-serif); font-size:.96rem; font-weight:600; letter-spacing:.1em;
+  box-shadow:0 3px 18px rgba(0,0,0,.18);
+  transition:background .25s, transform .2s;
+  border-radius:2px;
+}
+.btn-cta-w:hover { background:var(--warm); transform:translateY(-2px); }
+.btn-cta-line {
+  display:flex; align-items:center; gap:8px;
+  border:1.5px solid rgba(255,255,255,.45); color:rgba(255,255,255,.9);
+  padding:15px 32px;
+  font-family:var(--f-serif); font-size:.96rem; font-weight:600; letter-spacing:.1em;
+  transition:background .25s, border-color .25s, transform .2s;
+  border-radius:2px;
+}
+.btn-cta-line:hover { background:rgba(255,255,255,.12); border-color:#fff; transform:translateY(-2px); }
+.cta-note { margin-top:20px; font-size:.7rem; color:rgba(255,255,255,.38); letter-spacing:.1em; }
+
+
+/* ══════════════════════════════
+   FOOTER
+══════════════════════════════ */
+footer {
+  background:var(--text);
+  padding:44px 24px 28px; text-align:center;
+}
+.ft-logo-row { display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:8px; }
+.ft-logo-img { width:32px; height:32px; object-fit:contain; }
+.ft-logo-nm  { font-family:var(--f-disp); font-size:.95rem; color:rgba(255,255,255,.8); letter-spacing:.15em; }
+.ft-line { width:30px; height:1px; background:var(--tatami-lt); margin:12px auto; opacity:.35; }
+.ft-info { font-size:.72rem; color:rgba(255,255,255,.3); letter-spacing:.1em; line-height:2.4; }
+.ft-copy { margin-top:16px; font-size:.65rem; color:rgba(255,255,255,.18); }
+
+
+/* ══════════════════════════════
+   STICKY
+══════════════════════════════ */
+.sticky {
+  position:fixed; bottom:0; left:0; right:0; z-index:400;
+  display:flex; height:50px;
+  transform:translateY(100%);
+  transition:transform .4s var(--ease);
+  box-shadow:0 -2px 16px rgba(42,31,20,.2);
+}
+.sticky.on { transform:translateY(0); }
+.sticky a {
+  flex:1; display:flex; align-items:center; justify-content:center; gap:6px;
+  font-family:var(--f-serif); font-size:.82rem; font-weight:600; letter-spacing:.1em; color:#fff;
+  transition:filter .2s;
+}
+.sticky a:hover { filter:brightness(1.1); }
+.sticky .s-tel  { background:var(--green); }
+.sticky .s-web  { background:var(--gold); }
+
+
+/* ══════════════════════════════
+   RESPONSIVE
+══════════════════════════════ */
+@media(max-width:900px){
+  .reasons-cards { grid-template-columns:1fr; }
+  .prod-card { grid-template-columns:1fr; }
+  .prod-card:nth-child(even) { direction:ltr; }
+  .prod-card-img { min-height:260px; }
+  .voice-masonry { grid-template-columns:1fr 1fr; }
+  .process-line { grid-template-columns:repeat(2,1fr); gap:32px; }
+  .process-line::before { display:none; }
+  .access-2col { grid-template-columns:1fr; }
+}
+@media(max-width:600px){
+  .hero-price-badge { display:none; }
+  .hero-cta-row { flex-direction:column; }
+  .btn-main,.btn-sub { width:100%; justify-content:center; }
+  .voice-masonry { grid-template-columns:1fr; }
+  .prod-spec-grid { grid-template-columns:1fr; }
+  .cta-btnrow { flex-direction:column; }
+  .btn-cta-w,.btn-cta-line { width:100%; justify-content:center; }
+  .trust-item { padding:4px 12px; font-size:.68rem; }
+  .process-line { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-logo">
+    <img class="nav-logo-img" src="images/IMG_1050.jpeg" alt="はなまる工房ロゴ">
+    <span class="nav-logo-nm">はなまる工房</span>
+  </div>
+  <a href="tel:0922871469" class="nav-tel">
+    <span class="nav-tel-label">TEL</span>
+    092-287-1469
+  </a>
+</nav>
+
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg">
+    <img src="images/IMG_1052.jpeg" alt="喜び畳 命名書と赤ちゃん 雛人形の前で">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-light"></div>
+
+  <div class="hero-content">
+    <span class="hero-en">Yorokobi-Datami — Hanamaru Kobo</span>
+    <h1>
+      伝<span class="sm">わる</span>想<span class="sm">い、</span><br>
+      感<span class="sm">じる</span>温<span class="sm">もり。</span>
+    </h1>
+    <p class="hero-lead">
+      国産い草の畳に、繊細な刺繍を。<br>
+      世界にひとつの命名書「喜び畳」。<br>
+      安産の神様・宇美八幡宮のそばから、<br>
+      大切なご家族への贈り物を。
+    </p>
+    <div class="hero-cta-row">
+      <a href="tel:0922871469" class="btn-main">📞 092-287-1469</a>
+      <a href="#products" class="btn-sub">→ 商品・価格を見る</a>
+    </div>
+  </div>
+
+  <div class="hero-price-badge">
+    <div class="hpb-from">畳タイプ</div>
+    <div class="hpb-price">8,800<small style="font-size:.65em">円</small></div>
+    <div class="hpb-tax">税込・全国送料無料</div>
+  </div>
+
+  <div class="hero-scroll">
+    <span>scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+
+<!-- TRUST BAR -->
+<div id="trust">
+  <div class="trust-row">
+    <span class="trust-item"><span class="trust-icon">🚚</span>全国送料無料</span>
+    <span class="trust-item"><span class="trust-icon">🌿</span>国産い草使用</span>
+    <span class="trust-item"><span class="trust-icon">✦</span>日本唯一の畳刺繍</span>
+    <span class="trust-item"><span class="trust-icon">⛩</span>宇美八幡宮 隣接</span>
+    <span class="trust-item"><span class="trust-icon">🎁</span>ギフト包装対応</span>
+  </div>
+</div>
+
+
+<!-- OPENING COPY -->
+<section id="opening">
+  <div class="op-inner rv">
+    <p class="op-kana">
+      お子様<span class="sm">の</span>誕生<span class="sm">を、</span><br>
+      一生残<span class="sm">る</span>かたち<span class="sm">に。</span>
+    </p>
+    <div class="ornament"><div class="ornament-diamond"></div></div>
+    <p class="op-lead">
+      紙の命名書は色あせる。<br>
+      だから、国産い草の畳に刺繍を施しました。<br>
+      天然素材の香りと手触り、立体感のある刺繍。<br>
+      それがひとつになった喜び畳は、<br>
+      <span class="op-accent">はなまる工房にしか作れない、日本唯一の命名書です。</span>
+    </p>
+  </div>
+</section>
+
+
+<!-- フル写真 -->
+<div class="photo-full rv">
+  <img src="images/IMG_1049.jpeg" alt="赤ちゃんと喜び畳 命名書「結葵」">
+  <div class="photo-caption">「結葵」ちゃんの喜び畳 — 雛人形の前で</div>
+</div>
+
+
+<!-- REASONS -->
+<section class="sec-w" id="reasons">
+  <div class="wrap">
+    <div class="sh rv">
+      <span class="sh-tag">Why Hanamaru</span>
+      <h2>選<span class="sm">ばれる</span>理由<span class="sm">が、</span>3<span class="sm">つあります。</span></h2>
+    </div>
+
+    <div class="reasons-cards">
+      <div class="r-card rv">
+        <div class="r-card-img">
+          <img src="images/IMG_1043.jpeg" alt="喜び畳 畳タイプ 男の子用">
+        </div>
+        <div class="r-card-body">
+          <div class="r-num">01</div>
+          <h3>畳刺繍<span class="sm">は、</span>日本<span class="sm">で</span>ここだけ</h3>
+          <p>い草の粉末による機械損傷という長年の難題をクリア。この命名書は、はなまる工房にしか作れません。</p>
+          <span class="r-tag">日本唯一の技術</span>
+        </div>
+      </div>
+
+      <div class="r-card rv d1">
+        <div class="r-card-img">
+          <img src="images/IMG_1046.jpeg" alt="茉花ちゃんの喜び畳と赤ちゃん">
+        </div>
+        <div class="r-card-body">
+          <div class="r-num">02</div>
+          <h3>安産<span class="sm">の</span>神様<span class="sm">の</span>そば<span class="sm">で</span>生<span class="sm">まれる</span></h3>
+          <p>宇美八幡宮のすぐそばで制作。赤ちゃんの誕生への祈りが込められた場所から、あなたのご家族へ。</p>
+          <span class="r-tag">宇美八幡宮 隣接</span>
+        </div>
+      </div>
+
+      <div class="r-card rv d2">
+        <div class="r-card-img">
+          <img src="images/IMG_1044.jpeg" alt="喜び畳 額縁タイプ 優花・陽平">
+        </div>
+        <div class="r-card-body">
+          <div class="r-num">03</div>
+          <h3>職人<span class="sm">が</span>一点一点<span class="sm">、</span>手<span class="sm">で</span>刻<span class="sm">む</span></h3>
+          <p>畳職人がひと針ひと針、贈る人・受け取る人の笑顔を思い浮かべながら丁寧に制作します。</p>
+          <span class="r-tag">完全オーダーメイド</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PRODUCTS -->
+<section class="sec" id="products">
+  <div class="wrap">
+    <div class="sh rv">
+      <span class="sh-tag">Products &amp; Price</span>
+      <h2>商品<span class="sm">と</span>価格</h2>
+      <p>命名書から祝い畳まで。<br>大切な記念をかたちにする品々をご用意しています。</p>
+    </div>
+
+    <div class="products-list">
+
+      <!-- 命名書 畳タイプ -->
+      <div class="prod-card rv">
+        <div class="prod-card-img">
+          <span class="prod-card-tag">人気 No.1</span>
+          <img src="images/IMG_1047.jpeg" alt="喜び畳 命名書 茉花ちゃん 畳タイプ">
+        </div>
+        <div class="prod-card-body">
+          <p class="prod-card-en">Yorokobi-Datami / Meimeisho</p>
+          <h3>い草<span class="sm">の</span>命名書<br>「喜<span class="sm">び</span>畳」畳<span class="sm">タイプ</span></h3>
+          <p>国産い草に繊細な刺繍でお子様の名前・誕生日・身長・体重を刻んだ命名書。縁（へり）は人気柄20種類から選択可能。完全オーダーメイド。</p>
+          <div class="prod-spec-grid">
+            <div class="psg-item"><strong>Sサイズ</strong>約11.5×17.5cm　8,800円（税込）</div>
+            <div class="psg-item"><strong>Mサイズ</strong>約20.0×25.5cm　13,200円（税込）</div>
+            <div class="psg-item"><strong>Lサイズ</strong>約23.5×29.5cm　15,400円（税込）</div>
+            <div class="psg-item"><strong>縁の柄</strong>人気柄20種類から選択可</div>
+          </div>
+          <div class="prod-price-box">
+            <div class="prod-price-num">8,800<small style="font-size:.5em;color:var(--text-l)">円〜</small></div>
+            <div class="prod-price-info">
+              <strong>✓ 全国送料無料</strong>
+              税込・完全オーダーメイド<br>
+              文字・色・イラスト指定可
+            </div>
+          </div>
+          <a href="tel:0922871469" class="btn-prod">📞 注文・相談する</a>
+        </div>
+      </div>
+
+      <!-- 額縁タイプ -->
+      <div class="prod-card rv">
+        <div class="prod-card-img">
+          <span class="prod-card-tag">高級感・飾りやすい</span>
+          <img src="images/IMG_1044.jpeg" alt="喜び畳 額縁タイプ 優花・陽平">
+        </div>
+        <div class="prod-card-body">
+          <p class="prod-card-en">Frame Type</p>
+          <h3>い草<span class="sm">の</span>命名書<br>「喜<span class="sm">び</span>畳」額縁<span class="sm">タイプ</span></h3>
+          <p>高級感があり、和室の床の間・応接間にも美しく飾れる額縁タイプ。スタンダード・障子・トライバル・鶴亀の4種類をご用意。</p>
+          <div class="prod-spec-grid">
+            <div class="psg-item"><strong>スタンダード</strong>18,700円〜（税込）</div>
+            <div class="psg-item"><strong>障子タイプ</strong>24,200円〜（税込）</div>
+            <div class="psg-item"><strong>トライバル</strong>24,200円〜（税込）</div>
+            <div class="psg-item"><strong>鶴亀タイプ</strong>27,500円〜（税込）</div>
+          </div>
+          <div class="prod-price-box">
+            <div class="prod-price-num">18,700<small style="font-size:.5em;color:var(--text-l)">円〜</small></div>
+            <div class="prod-price-info">
+              <strong>✓ 全国送料無料</strong>
+              税込・サイズ 約356×386mm<br>
+              種類によって追加オプションあり
+            </div>
+          </div>
+          <a href="tel:0922871469" class="btn-prod">📞 注文・相談する</a>
+        </div>
+      </div>
+
+      <!-- 祝い畳 -->
+      <div class="prod-card rv">
+        <div class="prod-card-img">
+          <span class="prod-card-tag">還暦・開店・記念に</span>
+          <img src="images/IMG_1045.jpeg" alt="はなまる工房 祝い畳 メッセージ刺繍">
+        </div>
+        <div class="prod-card-body">
+          <p class="prod-card-en">Iwai-Datami / Custom Order</p>
+          <h3>祝<span class="sm">い</span>畳<span class="sm">・</span>ロゴ入<span class="sm">り</span>畳</h3>
+          <p>還暦祝い・新築祝い・開店祝い・感謝状・結婚式ウェルカムボードなど、人生の大切な記念日を完全オーダーメイドで制作します。</p>
+          <div class="prod-spec-grid">
+            <div class="psg-item"><strong>還暦・長寿祝い</strong>大切な方へのメッセージを</div>
+            <div class="psg-item"><strong>開店・新築祝い</strong>ロゴ・社名入り畳も制作可</div>
+            <div class="psg-item"><strong>ウェルカムボード</strong>結婚式の演出に</div>
+            <div class="psg-item"><strong>感謝状・記念品</strong>完全オーダーメイド対応</div>
+          </div>
+          <div class="prod-price-box">
+            <div class="prod-price-num" style="font-size:1.3rem">要お問合せ</div>
+            <div class="prod-price-info">
+              内容によって異なります<br>
+              まずはお気軽にご相談を
+            </div>
+          </div>
+          <a href="tel:0922871469" class="btn-prod">📞 詳細を相談する</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- VOICE -->
+<section class="sec-w2" id="voice">
+  <div class="wrap">
+    <div class="sh rv">
+      <span class="sh-tag">Customer Voice</span>
+      <h2>お客様<span class="sm">の</span>笑顔<span class="sm">と</span>声</h2>
+      <p>喜び畳を贈った方・受け取った方から、温かいお言葉をいただいています。</p>
+    </div>
+
+    <div class="voice-masonry">
+      <div class="v-card rv">
+        <div class="v-card-img">
+          <img src="images/IMG_1049.jpeg" alt="結葵ちゃんと喜び畳">
+        </div>
+        <div class="v-card-body">
+          <div class="v-stars">★★★★★</div>
+          <p class="v-text">産後の記念に特別なものを探していました。畳の香りと刺繍の美しさに感動して思わず涙が出ました。一生大切にします。</p>
+          <div class="v-footer">
+            <div class="v-ava">M</div>
+            <div><p class="v-name">30代 ママさん</p><p class="v-desc">第一子ご出産のお祝いに</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="v-card rv d1">
+        <div class="v-card-img">
+          <img src="images/IMG_1046.jpeg" alt="茉花ちゃんと喜び畳">
+        </div>
+        <div class="v-card-body">
+          <div class="v-stars">★★★★★</div>
+          <p class="v-text">孫へのプレゼントで悩んでいたところ教えてもらいました。「畳に刺繍」という発想が斬新で、娘家族みんなが大喜びでした。</p>
+          <div class="v-footer">
+            <div class="v-ava">Y</div>
+            <div><p class="v-name">60代 おばあ様</p><p class="v-desc">お孫様誕生のお祝いに</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="v-card rv d2">
+        <div class="v-card-img">
+          <img src="images/IMG_1048.jpeg" alt="雛人形と赤ちゃんと喜び畳">
+        </div>
+        <div class="v-card-body">
+          <div class="v-stars">★★★★★</div>
+          <p class="v-text">宇美八幡宮にお参り後に立ち寄りました。どこにも売っていない特別な命名書で、妻も大喜びでした。</p>
+          <div class="v-footer">
+            <div class="v-ava">K</div>
+            <div><p class="v-name">40代 パパさん</p><p class="v-desc">奥様への出産祝いとして</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROCESS -->
+<section class="sec" id="process">
+  <div class="wrap">
+    <div class="sh rv">
+      <span class="sh-tag">How to Order</span>
+      <h2>ご注文<span class="sm">の</span>流<span class="sm">れ</span></h2>
+      <p>お問い合わせから完成まで、丁寧にご対応します。</p>
+    </div>
+
+    <div class="process-line">
+      <div class="pl-step rv">
+        <div class="pl-dot">1</div>
+        <p class="pl-step-lbl">STEP 1</p>
+        <p class="pl-step-ttl">お問い合わせ</p>
+        <p class="pl-step-desc">お電話またはウェブよりご相談ください。</p>
+      </div>
+      <div class="pl-step rv d1">
+        <div class="pl-dot">2</div>
+        <p class="pl-step-lbl">STEP 2</p>
+        <p class="pl-step-ttl">内容のご確認</p>
+        <p class="pl-step-desc">お名前・デザインなど詳細をお聞きします。</p>
+      </div>
+      <div class="pl-step rv d2">
+        <div class="pl-dot">3</div>
+        <p class="pl-step-lbl">STEP 3</p>
+        <p class="pl-step-ttl">職人が制作</p>
+        <p class="pl-step-desc">ひと針ひと針、心を込めて刺繍を施します。</p>
+      </div>
+      <div class="pl-step rv d3">
+        <div class="pl-dot">4</div>
+        <p class="pl-step-lbl">STEP 4</p>
+        <p class="pl-step-ttl">お届け・受取</p>
+        <p class="pl-step-desc">全国送料無料。来店受取も可（要予約）。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="sec-w" id="faq">
+  <div class="wrap">
+    <div class="sh rv">
+      <span class="sh-tag">FAQ</span>
+      <h2>よくある<span class="sm">ご</span>質問</h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-it">
+        <button class="faq-q"><span class="faq-qm">Q</span><span>注文してからどのくらいで届きますか？</span><span class="faq-qi">＋</span></button>
+        <div class="faq-a">制作内容・時期によって異なります。出産予定日が決まっている場合はお早めにご相談いただくとスムーズです。まずはお電話（092-287-1469）にてご相談ください。</div>
+      </div>
+      <div class="faq-it">
+        <button class="faq-q"><span class="faq-qm">Q</span><span>福岡県外でも注文できますか？</span><span class="faq-qi">＋</span></button>
+        <div class="faq-a">はい、全国送料無料で対応しています。北海道・沖縄・離島の方もお気軽にご注文ください。</div>
+      </div>
+      <div class="faq-it">
+        <button class="faq-q"><span class="faq-qm">Q</span><span>文字・色・イラストはカスタマイズできますか？</span><span class="faq-qi">＋</span></button>
+        <div class="faq-a">はい。文字（ローマ字も可）・刺繍の色・イラスト（キャラクターも相談可）・縁のデザイン（20種類）を指定できる完全オーダーメイドです。</div>
+      </div>
+      <div class="faq-it">
+        <button class="faq-q"><span class="faq-qm">Q</span><span>出産前に注文できますか？</span><span class="faq-qi">＋</span></button>
+        <div class="faq-a">はい。出産予定日に合わせてスケジュールを調整します。お名前未定でも仮予約を承っております。</div>
+      </div>
+      <div class="faq-it">
+        <button class="faq-q"><span class="faq-qm">Q</span><span>実物を見てから注文できますか？</span><span class="faq-qi">＋</span></button>
+        <div class="faq-a">はい。工房にて実物をご覧いただけます。事前にお電話（092-287-1469）にてご予約をお願いします。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ACCESS -->
+<section class="sec" id="access">
+  <div class="wrap">
+    <div class="sh rv">
+      <span class="sh-tag">Access</span>
+      <h2>店舗<span class="sm">・</span>会社概要</h2>
+    </div>
+
+    <div class="access-2col">
+      <div class="rv">
+        <p class="access-h">はなまる工房</p>
+        <table class="access-tbl">
+          <tr><th>所在地</th><td>福岡県糟屋郡宇美町<br>明神坂2丁目5番3号</td></tr>
+          <tr><th>最寄</th><td>宇美八幡宮 徒歩圏内</td></tr>
+          <tr><th>電話</th><td>092-287-1469</td></tr>
+          <tr><th>FAX</th><td>092-510-0300</td></tr>
+          <tr><th>来店</th><td>事前にお電話でご予約ください</td></tr>
+          <tr><th>発送</th><td>全国送料無料で対応</td></tr>
+        </table>
+        <a href="tel:0922871469" class="btn-tel">
+          <div>
+            <div class="btn-tel-label">📞 お電話でのご予約・お問い合わせ</div>
+            <div class="btn-tel-num">092-287-1469</div>
+          </div>
+        </a>
+      </div>
+      <div class="rv d2">
+        <div class="map-placeholder">
+          <span class="map-pin">📍</span>
+          <p class="map-nm">はなまる工房</p>
+          <p class="map-ad">福岡県糟屋郡宇美町<br>明神坂2丁目5番3号<br>宇美八幡宮 近隣</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-photo">
+    <img src="images/IMG_1048.jpeg" alt="喜び畳と家族の笑顔">
+    <div style="position:absolute;inset:0;background:rgba(42,31,20,.58);"></div>
+  </div>
+  <div class="cta-body rv">
+    <span class="sh-tag" style="color:rgba(255,255,255,.45);">Contact &amp; Reserve</span>
+    <h2>
+      大切<span class="sm">な</span>命<span class="sm">の</span>誕生<span class="sm">を、</span><br>
+      畳<span class="sm">に</span>刻<span class="sm">みませんか。</span>
+    </h2>
+    <p>
+      ご相談・ご予約はお気軽にどうぞ。<br>
+      全国送料無料でお届けします。
+    </p>
+    <div class="cta-btnrow">
+      <a href="tel:0922871469" class="btn-cta-w">📞 今すぐ電話する</a>
+      <a href="https://yorokobidatami.com/otoiawase/" class="btn-cta-line" target="_blank">✉ ウェブで問い合わせ</a>
+    </div>
+    <p class="cta-note">来店は事前予約制 ／ 全国発送対応 ／ 完全オーダーメイド</p>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-logo-row">
+    <img class="ft-logo-img" src="images/IMG_1050.jpeg" alt="ロゴ">
+    <span class="ft-logo-nm">はなまる工房</span>
+  </div>
+  <div class="ft-line"></div>
+  <p class="ft-info">
+    福岡県糟屋郡宇美町明神坂2丁目5番3号 ｜ 宇美八幡宮 近隣<br>
+    TEL：092-287-1469 ／ FAX：092-510-0300<br>
+    い草の命名書「喜び畳」 ／ 全国送料無料
+  </p>
+  <p class="ft-copy">© 2025 はなまる工房 All Rights Reserved.</p>
+</footer>
+
+
+<!-- STICKY BAR -->
+<div class="sticky" id="stickyBar">
+  <a href="tel:0922871469" class="s-tel">📞 092-287-1469</a>
+  <a href="https://yorokobidatami.com/otoiawase/" class="s-web" target="_blank">✉ ウェブで問い合わせ</a>
+</div>
+
+
+<script>
+const rvObs = new IntersectionObserver(e => e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('on')}),{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>rvObs.observe(el));
+
+const nav = document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('on',scrollY>50),{passive:true});
+
+const sticky = document.getElementById('stickyBar');
+window.addEventListener('scroll',()=>sticky.classList.toggle('on',scrollY>400),{passive:true});
+
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const it = btn.closest('.faq-it');
+    const op = it.classList.contains('op');
+    document.querySelectorAll('.faq-it.op').forEach(el=>el.classList.remove('op'));
+    if(!op) it.classList.add('op');
+  });
+});
+</script>
+</body>
+</html>
